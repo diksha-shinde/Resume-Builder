@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style></style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="style.css">
+        
+</head>
+<title>Resume Generator</title>
+</head>
+
+<body>
+    <script>
+        function generateCV(){
+        
+        }
+        function addNewfield(){
+           
+        }
+        function addNewAQfield(){
+        let variable='aqfield'
+        }
+    </script>
+    <!----->
+
+   <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+    <div class="row">
+            <div class="col-md-6">
+               
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="Namefield">Your Name</label>
+                    <input type="text" id="Namefield" placeholder="Enter Here" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="Contactfield">Contact Number</label>
+                    <input type="text" id="Contactfield" placeholder="Enter Contact number" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressfield">Address</label>
+                    <textarea id="adfield" placeholder="Enter Address Here" class="form-control">
+                </textarea>
+                    <hr>
+                </div>
+                <p class="text-secondary my-2">Important Link</p>
+                <div class="form-group mt-2">
+                    <label for="fbfield">Facebook Link</label>
+                    <input type="text" id="fbfield" placeholder="Paste URL Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkfield">Linkedin</label>
+                    <input type="text" id="linkedfield" placeholder="Paste URL Here" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+               
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea 
+                    placeholder="Enter here" 
+                    class="form-control" 
+                    id="objectivefield">
+                </textarea>
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea placeholder="Enter here" class="form-control wefield">
+                     </textarea>
+                     <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewfield()" class="btn-primary btn-sm">ADD</button>
+                    </div>
+                 </div>
+                <hr>
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Acadamic Qualification</label>
+                    <textarea placeholder="Enter here" class="form-control aqField">
+                </textarea>
+                <div class="container text-center mt-2" id="aqAddButton">
+                    <button onclick="addNewAQfield()" class="btn-primary btn-sm" >
+                        ADD</button>
+                </div>
+                </div>
+                    </div>
+                </div>
+            <div class="container text-center">
+                <button  Ttype= "button"  onclick="generateCV()"  class="btn btn-primary btn-lg"> generateCV</button>
+                
+
+            
+
+            </div>
+
+       </div>
+       <div class="container" id="cv-template">
+            <div class="row">
+               <div class="col-md-4 text-center py-5 background">
+                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ8AAACUCAMAAAC6AgsRAAAAY1BMVEX///8AAAD8/PyBgYEEBAT4+PgICAjz8/PV1dVHR0dxcXHn5+dBQUFoaGjPz88xMTEQEBAVFRUpKSmZmZlZWVmtra0aGhq+vr5QUFDJycmSkpI5OTnt7e3e3t6Kioqzs7OioqJNKz2FAAAEiUlEQVR4nO2bi5aiMAyGaaEWKII3QBR03v8pN2nBy4wXVCDuOfmWZRyGyz9p0qYp43kMwzAMwzAMwzAMwzAMwzCPkXa79Q0xqEXBf3mlD7711PfIVHYXHte+76+PoTod+wIk4GkdHjLRkR1Crd0PyIG2VEpX8dJJC9yXZVxppeRXtK/2zG4lxGyG8mYoED+udgZ+Qg+4WYPGC4DWfu7jMm5IndA2HoZtGInbRKELZKJmtt4vvSaadV53RSBmUeO5c0hw5qt98Leb+sAJ/ZpQIEauJ/OiDYq/+gJR5JJuMJE4QoDzucC4IRCOR6H9JYj0Qb+8O0XuDXlweKepwgOHV8/ci91TDBvZRtL0gGHKJ/KEKOkGEXju/Km+OWX/4u2f6svowteT9e3IvaL2aBTiM8Pn8kRIoM3pk17VQ19F6H999JWEWX7aQ19K1f0Bpoc+Q6QPH6pWT+WtqFJUmzj16J/pRg948vqpvjVV/qxwC2FSObubn0KGmoXuxOmxVtE+irjLTPhaSioPVPCvysTi5vQDJyALkVUwyVRE8StR4eFh+x60cudR6LM7s7ljPjTgxni/SkeT6rNber8PXKVukkdY5YBn55n4OwOG2a/I8nbooKzCgHMdk87jgtMeSI5UM7dfAr0KhxE3iXM73M+rbyhPYu0PtvUWpbkKUYAit2uYWGrC1OVKoqfCn83i5HyLzU+oyKaV17RFLJiLpOv5Nltl2/k6raXXla7IsQKVLZLjB2s0hbWP75D3f9AZ6twXs+leA1cTlOp2bL3XkdqYpmmM0V9ivTYxth1KmO/iTZTs9/sk2sS73K5xOZ006akbHuzaVpPHxZ/cqojzRrt4Jpr/ShsIdeknbVIQnHYunUn8srZhQyLQRqnJ58WFuC7362rmxTw3ZOuE0LLldtFOhMQpr+pUumnTYltqquWjMO4mQgLXBM8pdDBzh9yROJzcfnZp4Wd/Xjm6Su+DiyMofv8z7SIDOpRs/KJNRR9ik9bCb+SUXggdX7o5e9oziXDaJp2wG4Qeo0yc2z1XGDhHTMrpehkpq8z1Iv3sZ7esmk5fGVm/Qvd7VB0SznTuRBGVU+lLo6vZZI8GtqdH6ejK0MeViR7W1O5aUkRGnZKKUbCFKB3js3r63oUR4ZpYY1FuxGbGjCBfvC6vFbjI5bjVSrh3lYigd9d3oc9GcVKNWuuF9jXtmPty+7ZjsRm5ffNV/47vt0RglY/avlJt39J21rgdd5jL37PdhQ3zMdtXb98IjQt5WHgb86WxsvhEnhVYlOPJk/Zdpk/sh+88jde+TdQnJX2gDy+PmlG0YXZ0XL4t7czyOEpxC/otfRCfha+72tfe4LmqbJeKPgwPu23M8EtK9m7h8oWs+b7GZXi644D64H7luY3eFWevLYfXZ++3+1ifYzf8kjpOXmU8gDq8PJbDL2liYv/sXb++wBA3dBaDqy1qb6diHyMSPUK1Q8p6NZC+Qg/fv8DtzDuztpuM8cod2G/nD8OhHr6UMGiRVo5Rkh7wlt/ypysMwzAMwzAMwzAMwzAMw5DyD/ElKn94OKG5AAAAAElFTkSuQmCC"
+                    alt="" class="img-fluid myimg" />
+                 <div class="container">
+                    <P id="nameT">disuza</P>
+                    <P id="ContactT">+919025876248,+919825554858</P>
+                    <p id="addressT">432351/455633 sector 26 Delhi,India</p>
+                    <hr>
+                    <P>
+                        <a id="fbT" href="http://facebook.com">http:facebook.com</a>
+                    </P>
+                    <P>
+                        <a id="linkedT" href="http://Linkedin.com">http:Linkedin.com</a>
+                    </P>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight:800;">Khushi Kumari</h1>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda quidem non,
+                            rerum amet, sit rem illo ipsa a quisquam omnis cumque harum ipsum repudiandae suscipit
+                            optio? Optio, facilis. Doloremque delectus autem consequatur quae hic iure earum cum
+                            repudiandae impedit.</p>
+                    </div>
+                </div>
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Work Experience
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere.</li>
+                            </vl>
+                            <vl>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere.</li>
+                            </vl>
+                            <vl>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere.</li>
+                            </ul>
+                        </div>
+                    </div>
+                        <div class="card mt-4">
+                            <div class="card-header background">
+                                <h3>Academic Qualification</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul id="aqT">
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere.</li>
+                                </vl>
+                                <vl>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere.</li>
+                                </vl>
+                                <vl>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere.</li>
+                                </ul>
+                            </div>
+                    </div>
+                      <div class="container mt-4 text-center">
+                        <button onclick="printCV()"  class="btn btn-primary text-center">
+                            Print CV
+                        </button>
+                      </div>
+            </div>
+        </div>
+    </div>
+    <script src="Sc.js"></script>
+</body>
+
+</html> 
